@@ -1,0 +1,47 @@
+Assignment 2: Linear Algebra for ML Answers
+
+1. b) A matrix
+2. c) A data sample
+3. b) A feature
+4. b) To transform inputs into outputs
+5. c) Weights
+6. a) Matrix transformation
+7. b) Vector transformation
+8. b) To represent data numerically
+9. b) Angle/similarity
+10. b) Dot product
+11. b) Dot product
+12. b) They are independent
+13. a) Reduces redundancy in features
+14. b) Overfit or become unstable
+15. b) Effective information content
+16. b) Reduce redundant features
+17. b) Eigenvalues and eigenvectors
+18. b) Important directions in data
+19. b) Importance (variance) along a direction
+20. b) More important direction
+21. b) To remove redundancy and improve efficiency
+22. b) Matrices and vectors
+23. a) Matrix multiplication
+24. b) Gradients (vector calculus)
+25. b) Vector operations
+26. b) Vector optimization
+27. b) To solve linear equations (e.g., regression)
+28. b) Redundancy or dependency
+29. b) Redundant features exist
+30. b) To stabilize numerical computations
+31. b) n-dimensional space
+32. a) Linear algebra
+33. a) Distance between vectors
+34. a) Distance between vectors
+35. a) Features become independent
+36. a) Dot product / cosine similarity
+37. b) Matrix
+38. a) Rank reduction
+39. b) To generalize matrices to higher dimensions
+40. b) Shift decision boundary
+41. b) A line/plane can separate them
+42. b) Linear algebra to higher dimensions
+43. b) Reduces computation
+44. b) Vectors
+45. a) Data + Linear Algebra + Optimization

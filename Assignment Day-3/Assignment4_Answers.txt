@@ -1,0 +1,128 @@
+Assignment 4: Dictionary Assignment Answers
+
+Q1. A Python dictionary is an unordered collection of key-value pairs.
+
+Q2. student = {"Name": "John", "Age": 21, "Department": "CSE"}
+
+Q3. student["Age"]
+
+Q4. student["Marks"] raises a KeyError if "Marks" is missing.
+
+Q5. student["Age"] raises KeyError if absent; student.get("Age") returns None if absent.
+
+Q6. for key in student:
+    print(key)
+
+Q7. for value in student.values():
+    print(value)
+
+Q8. for key, value in student.items():
+    print(f"{key} : {value}")
+
+Q9. if "Age" in student:
+    print("Age exists")
+
+Q10. len(student)
+
+Q11. student["City"] = "Chennai"
+
+Q12. student["Age"] = 22
+
+Q13. student.pop("Department", None)
+
+Q14. student.popitem()
+
+Q15. student.clear()
+
+Q16. keys = ["A","B","C"]
+values = [10,20,30]
+new_dict = dict(zip(keys, values))
+
+Q17. d1.update(d2)
+
+Q18. copied = d1.copy()
+
+Q19. max_value = max(marks.values())
+
+Q20. best = max(marks, key=marks.get)
+print(f"{best} scored {marks[best]}")
+
+Q21. print(list(marks.keys()))
+
+Q22. print(list(marks.values()))
+
+Q23. for item in marks.items():
+    print(item)
+
+Q24. count = sum(1 for v in marks.values() if v > 50)
+
+Q25. print([name for name, score in marks.items() if score > 80])
+
+Q26. avg = sum(marks.values()) / len(marks)
+
+Q27. count = sum(1 for key in marks if key.startswith("A"))
+
+Q28. keys() returns a view of dictionary keys.
+Q29. values() returns a view of dictionary values.
+Q30. items() returns a view of key-value pairs.
+Q31. pop() removes and returns the value for a given key.
+Q32. popitem() removes and returns the last inserted key-value pair.
+Q33. update() merges another dictionary into the dictionary.
+Q34. setdefault() returns the value for a key and inserts it with a default if missing.
+Q35. fromkeys() creates a new dictionary from given keys with a common value.
+
+Q36. text = "banana"
+freq = {ch: text.count(ch) for ch in set(text)}
+
+Q37. text = "I love Python and I love AI"
+words = text.split()
+freq = {word: words.count(word) for word in set(words)}
+
+Q38. original = {"A":1, "B":2}
+reversed_dict = {v: k for k, v in original.items()}
+
+Q39. values = list(student.values())
+duplicates = {v for v in values if values.count(v) > 1}
+
+Q40. sorted_by_key = dict(sorted(student.items()))
+
+Q41. sorted_by_value = dict(sorted(student.items(), key=lambda item: item[1]))
+
+Q42. squares = {i: i*i for i in range(1, 6)}
+
+Q43. cubes = {i: i**3 for i in range(1, 11)}
+
+Q44. keys = ["A", "B", "C"]
+values = [1, 2, 3]
+result = {k: v for k, v in zip(keys, values)}
+
+Q45. parity = {i: "Even" if i % 2 == 0 else "Odd" for i in range(1, 21)}
+
+Q46. students = {
+    101: {"Name": "John", "Age": 20},
+    102: {"Name": "Alice", "Age": 21},
+    103: {"Name": "Bob", "Age": 19}
+}
+
+Q47. print(students[102])
+
+Q48. students[101]["Age"] = 21
+
+Q49. for sid in students:
+    students[sid]["Marks"] = 0
+
+Q50. for sid, info in students.items():
+    print(sid, info)
+
+Q51. best_month = max(sales, key=sales.get)
+
+Q52. word_length = {word: len(word) for word in "Python is amazing".split()}
+
+Q53. updated = {k: v - 5 for k, v in inventory.items()}
+
+Q54. merged = {**d1}
+for k, v in d2.items():
+    merged[k] = merged.get(k, 0) + v
+
+Q55. phonebook = {}
+# use a loop with options to add, search, update, delete, display, and exit.

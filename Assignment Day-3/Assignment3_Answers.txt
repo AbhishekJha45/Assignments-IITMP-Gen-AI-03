@@ -1,0 +1,11 @@
+Assignment 3: Practice Problems Answers
+
+Q1: Consistent, Unique solution
+Q2: Consistent, Infinite solutions
+Q3: Inconsistent, No solution
+Q4: Consistent, Unique solution
+Q5: Consistent, Infinite solutions
+Q6: Inconsistent, No solution
+Q7: Consistent, Infinite solutions
+Q8: Inconsistent, No solution
+Q9: Consistent, Infinite solutions

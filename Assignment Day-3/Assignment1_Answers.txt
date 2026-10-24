@@ -1,0 +1,56 @@
+Assignment 1: Linear Algebra MCQ Answers
+
+1. b) rank(A) = rank([A|B])
+2. c) Unique solution
+3. b) At least one solution
+4. b) Infinite solutions
+5. b) rank(A) ≠ rank([A|B])
+6. c) A is invertible
+7. b) det(A - λI) = 0
+8. a) AX = λX
+9. b) 1
+10. b) Sum of diagonal elements
+11. c) Maximum number of linearly independent rows/columns
+12. b) Decrease
+13. b) 0
+14. b) Rank is reduced
+15. c) min(m, n)
+16. b) Infinite solutions
+17. d) Changing constants
+18. b) Independent
+19. b) Product of diagonal
+20. c) May be consistent or inconsistent
+21. c) det ≠ 0
+22. b) det(A) ≠ 0
+23. b) det(A - λI)=0
+24. b) Matrix singular
+25. c) No solution
+26. c) Unique solution
+27. b) Infinite solutions
+28. b) n
+29. b) Rank decreases
+30. b) rank(A) < rank([A|B])
+31. b) Diagonal elements
+32. b) Eigenvalues real
+33. a) 0 or 1
+34. b) Non-zero independent rows
+35. b) rank < variables
+36. b) Eigenvectors may differ
+37. b) Infinite or no solution
+38. a) A⁻¹ = Aᵀ
+39. a) Sum of eigenvalues
+40. b) May have fewer eigenvectors
+41. b) Only one independent row
+42. b) Does not exist
+43. b) Inconsistent
+44. a) Zero vector
+45. a) All eigenvalues same
+46. b) Diagonal elements
+47. b) Unique solution
+48. b) det = 0
+49. c) May or may not be consistent
+50. a) No vector is combination of others
+51. b) Unique solution
+52. b) det = 0
+53. c) May or may not be consistent
+54. b) No vector is combination of others

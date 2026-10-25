@@ -1,0 +1,102 @@
+ASSIGNMENT 1: PROBABILITY & STATISTICS - MCQ ANSWERS
+====================================================
+
+1. Probability Does Not Guarantee Outcomes
+   Answer: C
+   Explanation: Probability describes likelihood, not guaranteed outcomes. With 10 sensors and 20% failure rate, we might see 0, 1, 2, 3, or more failures. The expected value is 2, but that doesn't guarantee exactly 2 will fail.
+
+2. Distribution Shape
+   Answer: B
+   Explanation: A normal distribution is symmetric and bell-shaped, with most values concentrated near the mean and tails tapering off symmetrically.
+
+3. Standard Deviation
+   Answer: C
+   Explanation: Standard deviation measures how spread out data is from the mean. A smaller standard deviation indicates data points are closer to the mean, while a larger one indicates more spread.
+
+4. Outliers and Statistics
+   Answer: D
+   Explanation: Extreme values (outliers) can significantly affect the mean and standard deviation, potentially skewing statistical measures. The median and mode are more robust to outliers.
+
+5. Sensor Failure Probability
+   Answer: B
+   Explanation: With three independent sensors, the probability that all three fail is: P(all fail) = 0.1 × 0.1 × 0.1 = 0.001 or 0.1%
+
+6. Conditional Probability
+   Answer: B
+   Explanation: P(A and B) = P(A) × P(B|A). If events are independent: P(both fail) = 0.15 × 0.15 = 0.0225 or 2.25%
+
+7. Data Variability
+   Answer: C
+   Explanation: Data with higher variability (more spread) typically has a larger standard deviation compared to data tightly clustered around the mean.
+
+8. Normal Distribution Properties
+   Answer: B
+   Explanation: In a normal distribution: approximately 68% of data falls within 1 standard deviation, 95% within 2 standard deviations, and 99.7% within 3 standard deviations.
+
+9. Confidence Intervals
+   Answer: C
+   Explanation: A 95% confidence interval means if we repeated the experiment many times, approximately 95% of the intervals would contain the true population parameter.
+
+10. Hypothesis Testing
+    Answer: A
+    Explanation: A p-value less than 0.05 is typically considered statistically significant in hypothesis testing, suggesting strong evidence against the null hypothesis.
+
+11. Statistical Significance vs Practical Significance
+    Answer: D
+    Explanation: A result can be statistically significant (unlikely due to random chance) but not practically significant (the actual effect size is too small to matter in practice).
+
+12. Correlation and Causation
+    Answer: B
+    Explanation: Correlation measures association between variables, but does not imply causation. Other factors (confounders) might explain the observed relationship.
+
+13. Mean vs Median
+    Answer: C
+    Explanation: When data has extreme outliers, the median is more representative of the "typical" value than the mean, which is pulled by extreme values.
+
+14. Probability of Event or Its Complement
+    Answer: D
+    Explanation: P(A or not A) = 1, since an event either occurs or doesn't. This is a fundamental rule of probability.
+
+15. Independent Events
+    Answer: B
+    Explanation: If two events are independent, knowing one occurred doesn't change the probability of the other. P(B|A) = P(B).
+
+16. Sample Size Effect
+    Answer: A
+    Explanation: Larger sample sizes generally provide more reliable estimates of population parameters and reduce the standard error.
+
+17. Type I Error
+    Answer: A
+    Explanation: Type I error (false positive) occurs when we reject a true null hypothesis. The significance level (α) controls this probability.
+
+18. Type II Error
+    Answer: B
+    Explanation: Type II error (false negative) occurs when we fail to reject a false null hypothesis. This is related to statistical power.
+
+19. Statistical Power
+    Answer: D
+    Explanation: Statistical power is the probability of correctly rejecting a false null hypothesis. Higher power is better and depends on sample size, effect size, and significance level.
+
+20. Variance and Standard Deviation
+    Answer: A
+    Explanation: Variance is the square of standard deviation. If std dev = 5, then variance = 25.
+
+21. Covariance
+    Answer: C
+    Explanation: Covariance measures how two variables change together. A positive covariance indicates they tend to increase together; negative means opposite movement.
+
+22. Correlation Coefficient
+    Answer: B
+    Explanation: Correlation ranges from -1 to +1, where -1 is perfect negative correlation, 0 is no correlation, and +1 is perfect positive correlation.
+
+23. Central Limit Theorem
+    Answer: C
+    Explanation: The Central Limit Theorem states that the distribution of sample means approaches a normal distribution as sample size increases, regardless of the original distribution.
+
+24. Bayes' Theorem Application
+    Answer: A
+    Explanation: Bayes' theorem relates conditional probabilities: P(A|B) = P(B|A) × P(A) / P(B). It's useful for updating probabilities with new information.
+
+25. Predictive vs Descriptive Statistics
+    Answer: B
+    Explanation: Descriptive statistics summarize data (mean, median, std dev), while inferential/predictive statistics make predictions about populations from samples.

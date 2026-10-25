@@ -1,0 +1,202 @@
+ASSIGNMENT 1 PCA - MCQ ANSWERS
+=================================================
+
+1. Primary Purpose of PCA
+   Answer: B
+   Explanation: PCA's main purpose is dimensionality reduction - transforming high-dimensional data into lower dimensions while preserving important information/variance.
+
+2. PCA Transforms Original Variables Into
+   Answer: B
+   Explanation: PCA transforms original variables into principal components, which are new uncorrelated variables that capture the variance in the data.
+
+3. What Are Principal Components?
+   Answer: B
+   Explanation: Principal components are linear combinations of original features. For example: PC1 = w1*X1 + w2*X2 + ... where w are weights.
+
+4. First Principal Component Represents
+   Answer: B
+   Explanation: The first principal component represents the direction in the data along which variance is maximum (the direction of greatest spread).
+
+5. Second Principal Component Represents
+   Answer: B
+   Explanation: PC2 is orthogonal (perpendicular) to PC1 and captures the next highest variance while being uncorrelated with PC1.
+
+6. PCA is Primarily
+   Answer: B
+   Explanation: PCA is an unsupervised learning technique because it doesn't require labeled data. It only needs the features to discover patterns.
+
+7. Type of Information PCA Preserves
+   Answer: B
+   Explanation: PCA primarily preserves variance - it captures the directions where data varies the most, retaining important information.
+
+8. Why PCA is Useful for High-Dimensional Datasets
+   Answer: B
+   Explanation: PCA reduces dimensions while retaining important variation. This reduces computational cost, enables visualization, and removes redundancy.
+
+9. Why Variance is Important in PCA
+   Answer: B
+   Explanation: Variance indicates how much variation is captured along a direction. Higher variance = more information about how data is distributed.
+
+10. 2D Elongated Cloud - PC1 Alignment
+    Answer: B
+    Explanation: The first principal component aligns with the longest direction of the cloud where data is most spread out (maximum variance).
+
+11. Data on Straight Line - Required PCs
+    Answer: B
+    Explanation: If all data lies on a straight line, only 1 principal component is needed to represent it without loss.
+
+12. PCA Finds Directions That
+    Answer: A
+    Explanation: PCA maximizes variance successively - PC1 finds max variance, PC2 finds next max variance orthogonal to PC1, etc.
+
+13. Geometric Interpretation of PCA
+    Answer: A
+    Explanation: PCA geometrically rotates the coordinate system to align with directions of maximum variance in the data.
+
+14. Little Variation Along One Direction
+    Answer: B
+    Explanation: If a direction has little variation, PCA assigns it a small eigenvalue, so it appears as a later (less important) principal component.
+
+15. Why Mean Centering Before PCA
+    Answer: A
+    Explanation: Mean-centering moves data so its mean is at the origin, ensuring PCA captures variance correctly without bias from data location.
+
+16. PCA Without Centering When Centering is Needed
+    Answer: A
+    Explanation: Without centering, the principal directions may be influenced by where the data is located rather than its true variance structure.
+
+17. Why Standardization is Important
+    Answer: A
+    Explanation: Standardization ensures features with larger numerical scales don't dominate variance. Without it, scale-dependent features dominate PCs.
+
+18. Feature Range 0-10 vs 0-100,000
+    Answer: A
+    Explanation: Without scaling, the 0-100,000 feature will dominate PCA because its variance is much larger, overshadowing the smaller-scale feature.
+
+19. Mean Centering Changes
+    Answer: B
+    Explanation: Mean-centering shifts data location relative to origin but preserves all relative distances between observations.
+
+20. PCA Related to Analysis of
+    Answer: A
+    Explanation: PCA is closely related to covariance analysis because it uses eigendecomposition of the covariance matrix to find principal directions.
+
+21. What Covariance Matrix Describes
+    Answer: A
+    Explanation: A covariance matrix describes relationships and correlations between different variables in the dataset.
+
+22. Covariance Matrix Dimensions for 5 Features
+    Answer: C
+    Explanation: Covariance matrix is symmetric with dimensions = (number of features) × (number of features) = 5 × 5.
+
+23. Diagonal Elements of Covariance Matrix
+    Answer: B
+    Explanation: Diagonal elements represent variance of individual features. Off-diagonal elements represent covariance between pairs of features.
+
+24. Covariance Close to Zero
+    Answer: A
+    Explanation: Zero covariance indicates no linear covariance relationship between the two features (they may still be dependent non-linearly).
+
+25. Strong Correlation Between Features
+    Answer: A
+    Explanation: Strong correlation suggests redundant information - both features are capturing similar patterns, indicating dimensionality reduction opportunity.
+
+26. PCA Uses Eigenvectors of Covariance Matrix to Determine
+    Answer: A
+    Explanation: Eigenvectors represent the principal directions (the axes along which data varies the most).
+
+27. Eigenvalues in PCA Indicate
+    Answer: A
+    Explanation: Eigenvalues represent the amount of variance associated with each principal component.
+
+28. PC1 Much Larger Eigenvalue Than PC2
+    Answer: A
+    Explanation: Larger eigenvalue means more variance, so PC1 captures significantly more variance than PC2.
+
+29. Principal Component Corresponding to Largest Eigenvalue
+    Answer: A
+    Explanation: PC1 always corresponds to the largest eigenvalue because it captures the maximum variance.
+
+30. Principal Components Ordered According to
+    Answer: B
+    Explanation: PCs are ordered by decreasing explained variance (largest eigenvalue first, smallest last).
+
+31. Covariance Matrix Eigenvalues 10, 3, 1
+    Answer: A
+    Explanation: The eigenvector corresponding to eigenvalue 10 (largest) becomes PC1, capturing the most variance.
+
+32. Eigenvectors of Symmetric Covariance Matrix
+    Answer: A
+    Explanation: Eigenvectors corresponding to different eigenvalues of a symmetric matrix are orthogonal (perpendicular) to each other.
+
+33. Explained Variance Ratio Represents
+    Answer: A
+    Explanation: Explained variance ratio = eigenvalue / sum of all eigenvalues. It shows the fraction of total variance each PC captures.
+
+34. PC1 Explains 70%, PC2 Explains 20%
+    Answer: C
+    Explanation: Together: 70% + 20% = 90% of total variance.
+
+35. First Three PCs Explain 95% Variance
+    Answer: B
+    Explanation: This means the three components capture 95% of the variance present in the original data.
+
+36. Scree Plot Commonly Used to
+    Answer: A
+    Explanation: A scree plot visualizes eigenvalues and helps select the number of PCs by identifying diminishing returns.
+
+37. Elbow in Scree Plot Indicates
+    Answer: A
+    Explanation: The elbow point shows where additional components provide diminishing returns - a natural stopping point for dimensionality reduction.
+
+38. 100 Features Reduced to 10 PCs
+    Answer: A
+    Explanation: Reducing from 100 to 10 PCs is dimensionality reduction - the data is now represented in lower dimensions.
+
+39. Major Advantage of PCA Reduction
+    Answer: A
+    Explanation: Main benefits: lower computational cost, reduced memory/storage, faster training and prediction.
+
+40. PCA Reduced Dimensions Components
+    Answer: A
+    Explanation: Resulting PCs are generally linear combinations/mixtures of original features, not the original features themselves.
+
+41. Reducing 50D to 2D Particularly Useful For
+    Answer: A
+    Explanation: Projecting high-dimensional data to 2D enables human visualization of patterns and clusters.
+
+42. Main Trade-off When Reducing Dimensions
+    Answer: A
+    Explanation: The trade-off is simplicity vs information - reducing dimensions simplifies but may lose some variance/information.
+
+43. PC1 = 0.8*X₁ + 0.5*X₂ - 0.2*X₃ Coefficients Indicate
+    Answer: A
+    Explanation: Coefficients (0.8, 0.5, -0.2) represent the contribution/weight of each original feature to PC1.
+
+44. Large Absolute Loading on PC1
+    Answer: A
+    Explanation: A large loading means that feature contributes strongly to PC1 and varies significantly in that direction.
+
+45. Two Features Similar Loadings on PC1
+    Answer: A
+    Explanation: Similar loadings suggest these features contribute similarly to PC1 and may contain related information.
+
+46. PCA Components Difficult to Interpret Because
+    Answer: A
+    Explanation: PCs combine information from multiple original variables, making them abstract and harder to interpret than original features.
+
+47. Most Appropriate Statement About PCA
+    Answer: B
+    Explanation: PCA identifies directions of high variance in data - this is its core purpose (not guaranteeing predictive power).
+
+48. PCA Can Be Sensitive To
+    Answer: A
+    Explanation: PCA is sensitive to feature scaling (large-scale features dominate) and outliers (extreme values affect variance calculations).
+
+49. Outlier With Extremely Large Values
+    Answer: A
+    Explanation: Outliers strongly influence PCA because they increase variance in certain directions, potentially skewing principal directions.
+
+50. Best Description of PCA
+    Answer: B
+    Explanation: PCA creates new orthogonal directions that capture variance in the data - this is the most complete and accurate description.

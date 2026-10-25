@@ -1,0 +1,56 @@
+ASSIGNMENT 7: EXECUTING PROGRAMS THROUGH TERMINAL - MCQ ANSWERS
+================================================================
+
+1. B
+2. A
+3. B
+4. C
+5. A
+6. C
+7. A
+8. A
+9. B
+10. A
+11. A
+12. B
+13. A
+14. C
+15. B
+16. A
+17. B
+18. A
+19. B
+20. C
+
+21.Terminal Execution Task:
+
+# calculator.py
+
+def add(a, b):
+    return a + b
+
+
+def subtract(a, b):
+    return a - b
+
+
+def multiply(a, b):
+    return a * b
+
+
+def divide(a, b):
+    if b == 0:
+        return "Cannot divide by zero"
+    return a / b
+
+
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+
+print("Addition:", add(num1, num2))
+print("Subtraction:", subtract(num1, num2))
+print("Multiplication:", multiply(num1, num2))
+print("Division:", divide(num1, num2))
+
+Run from terminal:
+python calculator.py

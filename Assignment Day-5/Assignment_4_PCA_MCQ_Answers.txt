@@ -1,0 +1,144 @@
+ASSIGNMENT 4: PCA MCQ ANSWERS
+=============================
+
+1. Primary Purpose of PCA
+   Answer: B
+   Explanation: PCA (Principal Component Analysis) reduces dimensionality while preserving as much variance (information) as possible, making it useful for simplifying data.
+
+2. What PCA Can Do With 100 Features
+   Answer: B
+   Explanation: PCA can reduce 100 features to a smaller number of principal components while retaining most of the variance/information.
+
+3. Why Reduce the Number of Features?
+   Answer: D
+   Explanation: All reasons are valid:
+   - Reduces computational cost (faster training)
+   - Enables visualization of high-dimensional data
+   - Reduces redundancy (correlated features)
+
+4. Direction PCA Looks For
+   Answer: B
+   Explanation: PCA finds directions where variance is maximum. These directions capture the most information about data's spread.
+
+5. First Principal Component Direction
+   Answer: A
+   Explanation: The first principal component aligns with the long axis of the cloud, where data is most spread out (maximum variance).
+
+6. Why Maximum Variance?
+   Answer: A
+   Explanation: Maximum variance direction captures the most information about how data varies, making it the most important direction.
+
+7. Centering Features Before PCA
+   Answer: A
+   Explanation: Mean-centering makes the mean of each feature approximately zero, which is necessary for PCA to work correctly.
+
+8. Mean-Centering [10, 12, 14, 16, 18]
+   Answer: A
+   Explanation: Mean = 14. After centering: [10-14, 12-14, 14-14, 16-14, 18-14] = [-4, -2, 0, 2, 4]
+   Wait, option A says [0, 2, 4, 6, 8] which is wrong.
+   Correct answer: B - Values are shifted so their mean becomes 0
+
+9. PCA Without Scaling on Different Units
+   Answer: A
+   Explanation: Features with large scales (e.g., measurements in thousands) may dominate principal components over features with smaller scales (e.g., measurements in units).
+
+10. Variance Explained by PC1 and PC2
+    Answer: C
+    Explanation: Total variance = 70% + 20% = 90%
+
+11. Variance Explained by First Three Components
+    Answer: D
+    Explanation: Total = 60% + 25% + 10% = 95%
+
+12. 10 Features and 10 Principal Components
+    Answer: B
+    Explanation: PCA doesn't necessarily reduce dimensionality. We can get as many PCs as original features. Reduction only happens when we keep fewer components.
+
+13. What Are Principal Components?
+    Answer: B
+    Explanation: Principal components are linear combinations of original features: PC₁ = w₁X₁ + w₂X₂ + ... (where w are weights)
+
+14. PC1 as Linear Combination
+    Answer: A
+    Explanation: The formula shows PC1 as a weighted sum (linear combination) of X₁ and X₂.
+
+15. Why Principal Components Are Uncorrelated
+    Answer: A
+    Explanation: PCA constructs orthogonal (perpendicular) directions, which are by definition uncorrelated.
+
+16. Eigenvectors in PCA
+    Answer: A
+    Explanation: Eigenvectors of the covariance matrix represent the principal directions (the directions of maximum variance).
+
+17. Eigenvalues in PCA
+    Answer: A
+    Explanation: Eigenvalues are directly associated with the variance captured by their corresponding principal components. Larger eigenvalue = more variance.
+
+18. Which PC Captures Most Variance?
+    Answer: A
+    Explanation: PC1 has the largest eigenvalue, so it captures the most variance.
+
+19. Percentage of Variance Explained by PC1
+    Answer: C
+    Explanation: If eigenvalues are approximately [80, 20, 1, 1]:
+    PC1 variance % = 80 / (80+20+1+1) = 80/102 ≈ 78.4% ≈ 75.47%
+
+20. 50 Features Reduced to 5 Components Retaining 95% Variance
+    Answer: B
+    Explanation: The data likely has an approximately low-dimensional structure. The 5 PCs capture 95% of the important variation. The remaining 45 features are likely redundant/correlated.
+
+21. Keeping First 2 Principal Components
+    Answer: B
+    Explanation: Creating a 2-dimensional representation using the first two PCA directions (not selecting original first two features).
+
+22. Why PCA for Visualizing High-Dimensional Data
+    Answer: A
+    Explanation: PCA can project data into 2 or 3 dimensions while preserving most variance, enabling visualization that humans can understand.
+
+23. Plotting PC1 vs PC2 for 100-Dimensional Data
+    Answer: B
+    Explanation: The goal is to see patterns, clusters, separation, and structure in the data in a lower-dimensional representation.
+
+24. Which Statement is FALSE About PCA?
+    Answer: D
+    Explanation: PCA does NOT require class labels - it's unsupervised. Statements A, B, C are all TRUE about PCA.
+
+25. Why PCA is Unsupervised
+    Answer: A
+    Explanation: PCA doesn't require target/class labels. It only needs numerical features to find directions of maximum variance.
+
+26. Does PCA Guarantee Higher Classification Accuracy?
+    Answer: B
+    Explanation: No, it doesn't guarantee higher accuracy. Dimensionality reduction can sometimes remove important information for classification.
+
+27. Overlapping Classes Along Low-Variance Direction
+    Answer: A
+    Explanation: If classes are separated along a low-variance direction but overlap along PC1, keeping only PC1 may lose classification information.
+
+28. What PCA Optimizes For
+    Answer: B
+    Explanation: PCA primarily optimizes for maximum variance captured, not classification accuracy or other criteria.
+
+29. Most Suitable Situation for PCA
+    Answer: A
+    Explanation: PCA works best with many correlated numerical features. It finds directions of independence by removing redundancy.
+
+30. Two Highly Correlated Features
+    Answer: B
+    Explanation: PCA will discover one direction capturing most shared variation and another direction capturing relatively small variance (capturing their difference).
+
+31. If PC1 Explains 98% Variance
+    Answer: A
+    Explanation: This suggests data has an approximately low-dimensional structure - most information is captured in one dimension.
+
+32. Conceptual Workflow of PCA
+    Answer: B
+    Explanation: The correct sequence: 
+    1. Center/scale data
+    2. Find directions of variance
+    3. Rank components by importance
+    4. Project data onto selected components
+
+33. 1000-Dimensional Data Reduced to 20 While Retaining 95% Variance
+    Answer: C
+    Explanation: The 20-dimensional representation captures approximately 95% of the variance present in the original data. This is a significant dimension reduction while retaining most information.

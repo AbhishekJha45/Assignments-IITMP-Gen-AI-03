@@ -1,0 +1,189 @@
+ASSIGNMENT 3: TENSOR PYTHON TASKS - SOLUTIONS
+==============================================
+
+TASK 1: Create a Tensor
+-----------------------
+Solution:
+
+import numpy as np
+
+# Create 1D tensor (vector)
+sensor_readings = np.array([25.2, 25.5, 24.9, 26.1, 25.8])
+
+# Print tensor
+print("Tensor:", sensor_readings)
+# Output: [25.2 25.5 24.9 26.1 25.8]
+
+# Print shape
+print("Shape:", sensor_readings.shape)
+# Output: (5,)
+
+# Print number of dimensions
+print("Number of dimensions:", sensor_readings.ndim)
+# Output: 1
+
+# Print number of elements
+print("Number of elements:", sensor_readings.size)
+# Output: 5
+
+Key Differences:
+- Tensor values: The actual numbers stored
+- Shape: (5,) - describes dimensions (5 elements in 1 dimension)
+- Number of dimensions (ndim): 1 - how many axes
+- Number of elements (size): 5 - total count of values
+
+
+TASK 2: From Vector to Matrix
+------------------------------
+Solution:
+
+import numpy as np
+
+# Define sensor data for 5 time steps
+Temperature = [25, 26, 25, 27, 28]
+Pressure = [101, 102, 101, 103, 104]
+Humidity = [60, 62, 61, 63, 64]
+Vibration = [0.2, 0.3, 0.2, 0.4, 0.5]
+
+# Create matrix with shape (5, 4)
+# Rows = time steps, Columns = sensors
+data = np.array([Temperature, Pressure, Humidity, Vibration]).T
+
+print("Tensor shape:", data.shape)
+# Output: (5, 4)
+
+print("Number of dimensions:", data.ndim)
+# Output: 2
+
+print("First time step:", data[0])
+# Output: [25. 101. 60. 0.2]
+
+print("Temperature readings:", data[:, 0])
+# Output: [25 26 25 27 28]
+
+print("Vibration readings:", data[:, 3])
+# Output: [0.2 0.3 0.2 0.4 0.5]
+
+Interpretation:
+- Rows represent time steps (5 total)
+- Columns represent sensors (4 total: temperature, pressure, humidity, vibration)
+- Each row is a complete snapshot at one time point
+- Each column shows how one sensor changes over time
+
+
+TASK 3: Create a 3D Tensor
+---------------------------
+Solution:
+
+import numpy as np
+
+# Create a 3D tensor for 10 machines, 5 time steps, 4 sensors
+# Shape: (10, 5, 4)
+# Initialize with random data
+np.random.seed(42)
+data_3d = np.random.randint(20, 30, size=(10, 5, 4))
+
+print("Tensor shape:", data_3d.shape)
+# Output: (10, 5, 4)
+
+# What is the temperature reading of machine 3 at time step 2?
+answer_1 = data_3d[2, 1, 0]  # machine 2 (0-indexed), time 1 (0-indexed), sensor 0
+print("Machine 3, Time step 2, Sensor 0:", answer_1)
+
+# Extract all sensor readings of machine 5
+answer_2 = data_3d[4]  # machine 4 (0-indexed), all time steps, all sensors
+print("All sensor readings of machine 5:")
+print("Shape:", answer_2.shape)  # (5, 4)
+print(answer_2)
+
+# Extract all machines at time step 1
+answer_3 = data_3d[:, 0]  # all machines, time step 0 (0-indexed), all sensors
+print("All machines at time step 1:")
+print("Shape:", answer_3.shape)  # (10, 4)
+print(answer_3)
+
+# Extract the readings of sensor 4 from all machines and all time steps
+answer_4 = data_3d[:, :, 3]  # all machines, all time steps, sensor 3 (0-indexed)
+print("Sensor 4 readings (all machines, all time steps):")
+print("Shape:", answer_4.shape)  # (10, 5)
+print(answer_4)
+
+
+TASK 4: Indexing a Tensor
+--------------------------
+Solution:
+
+import numpy as np
+
+X = np.arange(24).reshape(2, 3, 4)
+print("X:")
+print(X)
+
+print("\nX[0]:")
+print(X[0])
+
+print("\nX[1]:")
+print(X[1])
+
+print("\nX[0, 0]:")
+print(X[0, 0])
+
+print("\nX[0, 0, 0]:")
+print(X[0, 0, 0])
+
+Answers:
+1. What is the shape of X?
+   Answer: (2, 3, 4)
+   
+2. What does X[0] represent?
+   Answer: The first "block" or "matrix" - shape is (3, 4)
+   Represents all 3 rows and 4 columns of the first block
+   
+3. What does X[0, 0] represent?
+   Answer: The first row of the first block - shape is (4,)
+   A 1D array with 4 elements
+   
+4. What does X[0, 0, 0] represent?
+   Answer: A single scalar value (first element)
+   The value at position [0][0][0]
+
+
+TASK 5: Slicing
+---------------
+Solution:
+
+import numpy as np
+
+X = np.arange(60).reshape(3, 4, 5)
+
+print("Original shape:", X.shape)  # (3, 4, 5)
+
+# Extract the first block
+first_block = X[0]
+print("\nFirst block (X[0]) shape:", first_block.shape)  # (4, 5)
+print("First block:")
+print(first_block)
+
+# Extract the first row from every block
+first_row_all = X[:, 0, :]
+print("\nFirst row from every block (X[:, 0, :]) shape:", first_row_all.shape)  # (3, 5)
+print("First row from every block:")
+print(first_row_all)
+
+# Extract the third element from every row and every block
+third_element = X[:, :, 2]
+print("\nThird element from every row and block (X[:, :, 2]) shape:", third_element.shape)  # (3, 4)
+print("Third element from every row and block:")
+print(third_element)
+
+# Extract the last two elements along the final dimension
+last_two = X[:, :, -2:]
+print("\nLast two elements (X[:, :, -2:]) shape:", last_two.shape)  # (3, 4, 2)
+print("Last two elements:")
+print(last_two)
+
+Summary of Slicing:
+- X[0] → First block: (4, 5)
+- X[:, 0, :] → First row from all blocks: (3, 5)
+- X[:, :, 2] → Third column from all elements: (3, 4)
+- X[:, :, -2:] → Last two columns: (3, 4, 2)

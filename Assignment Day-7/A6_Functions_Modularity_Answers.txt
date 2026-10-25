@@ -1,0 +1,161 @@
+
+ASSIGNMENT 6: FUNCTIONS & MODULARITY - ANSWERS
+===============================================
+
+MCQ Answers:
+1. C
+2. B
+3. B
+4. C
+5. C
+6. C
+7. B
+8. B
+9. B
+10. C
+11. B
+12. D
+13. B
+14. B
+15. A
+16. B
+17. B
+18. B
+19. A
+20. B
+
+Practical answers:
+
+21. Write a Python function called calculate_average() that accepts a list of numbers and returns their average.
+
+def calculate_average(numbers):
+    return sum(numbers) / len(numbers)
+
+22. Write a Python function called find_maximum() that accepts a list of numbers and returns the largest value without using Python's built-in max() function.
+
+def find_maximum(numbers):
+    maximum = numbers[0]
+    for num in numbers[1:]:
+        if num > maximum:
+            maximum = num
+    return maximum
+
+23. Write a modular Python program that contains separate functions to:
+- Read a list of numbers
+- Calculate the mean
+- Calculate the maximum
+- Display the results
+
+def read_numbers():
+    nums = list(map(float, input("Enter numbers separated by spaces: ").split()))
+    return nums
+
+
+def calculate_mean(numbers):
+    return sum(numbers) / len(numbers)
+
+
+def calculate_max(numbers):
+    maximum = numbers[0]
+    for num in numbers[1:]:
+        if num > maximum:
+            maximum = num
+    return maximum
+
+
+def display_result(numbers):
+    mean_value = calculate_mean(numbers)
+    max_value = calculate_max(numbers)
+    print("Mean:", mean_value)
+    print("Maximum:", max_value)
+
+
+nums = read_numbers()
+display_result(nums)
+
+24. Write a Python function called count_even() that accepts a list of integers and returns the number of even numbers in the list.
+
+def count_even(numbers):
+    count = 0
+    for num in numbers:
+        if num % 2 == 0:
+            count += 1
+    return count
+
+25. Write a modular Python program to calculate the accuracy of a classification model using two functions: calculate_accuracy(y_true, y_pred) and display_result(accuracy)
+
+
+def calculate_accuracy(y_true, y_pred):
+    correct = 0
+    for actual, predicted in zip(y_true, y_pred):
+        if actual == predicted:
+            correct += 1
+    return correct / len(y_true)
+
+
+def display_result(accuracy):
+    print("Model accuracy:", accuracy)
+
+
+y_true = [1, 0, 1, 1, 0]
+y_pred = [1, 0, 0, 1, 0]
+acc = calculate_accuracy(y_true, y_pred)
+display_result(acc)
+
+26. Write a Python function that accepts a list of numbers and returns two values: mean and standard deviation.
+
+def mean_and_std(numbers):
+    mean_value = sum(numbers) / len(numbers)
+    variance = sum((x - mean_value) ** 2 for x in numbers) / len(numbers)
+    std_dev = variance ** 0.5
+    return mean_value, std_dev
+
+27. Write a function called normalize() that accepts a list of numerical values and performs min-max normalization.
+
+def normalize(values):
+    minimum = min(values)
+    maximum = max(values)
+    normalized = []
+    for value in values:
+        if maximum == minimum:
+            normalized.append(0)
+        else:
+            normalized.append((value - minimum) / (maximum - minimum))
+    return normalized
+
+28. Write a modular Python program for a simple machine-learning preprocessing pipeline using separate functions.
+
+def load_data():
+    return [2, 4, None, 6, 8, 10]
+
+
+def remove_missing_values(data):
+    return [x for x in data if x is not None]
+
+
+def normalize_data(data):
+    minimum = min(data)
+    maximum = max(data)
+    return [(x - minimum) / (maximum - minimum) for x in data]
+
+
+def display_data(data):
+    print(data)
+
+
+raw_data = load_data()
+clean_data = remove_missing_values(raw_data)
+normalized = normalize_data(clean_data)
+display_data(normalized)
+
+29. Write a Python function to calculate the Euclidean distance between two points without using any built-in distance function.
+
+def euclidean_distance(p1, p2):
+    return ((p1[0] - p2[0]) ** 2 + (p1[1] - p2[1]) ** 2) ** 0.5
+
+point1 = (1, 2)
+point2 = (4, 6)
+print(euclidean_distance(point1, point2))
+
+Summary:
+Functions improve code reuse and modularity. A modular program is easier to read, test, debug, and maintain.

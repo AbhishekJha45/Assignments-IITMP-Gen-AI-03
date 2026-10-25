@@ -1,0 +1,123 @@
+ASSIGNMENT 2: TENSOR MCQ ANSWERS
+=================================
+
+1. Shape Property
+   Answer: B
+   Explanation: The shape attribute describes the dimensions of a tensor. For a 3D tensor with shape (2, 3, 4), it has 2 blocks, each with 3 rows and 4 columns.
+
+2. Dimension Count
+   Answer: D
+   Explanation: Number of dimensions = length of shape tuple. Shape (2, 3, 4) has 3 dimensions (or rank 3).
+
+3. Total Elements
+   Answer: B
+   Explanation: Total elements = product of all shape dimensions = 2 × 3 × 4 = 24 elements.
+
+4. 1D Tensor Term
+   Answer: B
+   Explanation: A 1D tensor is called a vector. A scalar is 0D, a matrix is 2D, and tensors are 3D or higher.
+
+5. 2D Tensor Term
+   Answer: A
+   Explanation: A 2D tensor is called a matrix. It has rows and columns.
+
+6. Tensor Rank
+   Answer: B
+   Explanation: Rank = number of dimensions/axes. Shape (32, 224, 224, 3) has 4 axes, so rank is 4 (not 32).
+
+7. Batch Dimension
+   Answer: A
+   Explanation: For 16 RGB images of 128×128: batch size = 16, height = 128, width = 128, channels = 3 (RGB).
+   Correct shape: (16, 128, 128, 3)
+
+8. Sensor Data
+   Answer: B
+   Explanation: Shape (60, 10) means 60 rows and 10 columns. Each row represents one time instant with readings from all 10 sensors.
+
+9. Adding Multiple Machines
+   Answer: A
+   Explanation: Shape (100, 60, 10) means 100 machines, 60 time steps per machine, 10 sensors per machine.
+   Interpretation: Machines × Time × Sensors
+
+10. Text as a Tensor
+    Answer: B
+    Explanation: A sequence of token IDs [15, 42, 87, 102, 9] is naturally represented as a 1D tensor (vector).
+
+11. Understanding Embedding Dimension
+    Answer: D
+    Explanation: In shape (32, 100, 768): 32=batch, 100=tokens, 768=embedding dimension (size of each token's representation).
+
+12. Tensor Indexing
+    Answer: C
+    Explanation: X[0] with shape (32, 100, 768) selects the first complete sentence/sequence, which has shape (100, 768).
+
+13. Tensor Slicing
+    Answer: B
+    Explanation: X[:, 0, :] means all batch samples (:), token at position 0 (0), all embedding dimensions (:).
+    This selects the first token from every sentence.
+
+14. Shape Compatibility
+    Answer: A
+    Explanation: When two tensors have identical shapes, element-by-element operations like addition work naturally.
+
+15. Broadcasting
+    Answer: B
+    Explanation: NumPy/PyTorch broadcasting allows b.shape (768,) to be broadcast across the first two dimensions of X.
+    b is treated as (1, 1, 768) then expanded to (32, 100, 768).
+
+16. Concatenation
+    Answer: A
+    Explanation: Concatenating A(32, 100, 128) and B(32, 100, 256) along dimension 2 (features) gives (32, 100, 128+256) = (32, 100, 384).
+
+17. Reshaping - Total Elements
+    Answer: C
+    Explanation: Total elements = 4 × 5 × 6 = 120 elements.
+
+18. Valid Reshape
+    Answer: D
+    Explanation: Both B and C are valid:
+    - (2, 30) = 60 elements ✓
+    - (3, 20, 2) = 120 elements ✓
+    Total is 120, so both preserve element count.
+
+19. Reshape vs Transpose
+    Answer: B
+    Explanation: Changing (32, 224, 224, 3) to (32, 3, 224, 224) reorders axes (moving channels from last to second position).
+    This requires transpose/permute, not reshape.
+
+20. Dimension Mismatch Issue
+    Answer: B
+    Explanation: The model interprets (batch, channels, height, width) but receives (batch, height, width, channels).
+    This can cause incorrect interpretation - e.g., treating spatial dimensions as channels.
+
+21. Flattening
+    Answer: C
+    Explanation: Flattened size = 224 × 224 × 3 = 150,528 elements.
+
+22. Tensor vs Matrix
+    Answer: B
+    Explanation: A matrix is a 2D tensor. Tensors are a generalization of matrices to any number of dimensions.
+
+23. Neural Network Activations
+    Answer: C
+    Explanation: 64 samples, each producing a 128-dimensional feature vector = shape (64, 128).
+
+24. Convolutional Layer
+    Answer: B
+    Explanation: Input (16, 3, 224, 224) → Output (16, 64, 112, 112)
+    Changes: channels increased (3→64), spatial resolution reduced (224→112). Batch size unchanged (16).
+
+25. Why Tensors in Deep Learning
+    Answer: A
+    Explanation: Tensors provide structured multidimensional data representation and enable efficient vectorized numerical operations on GPUs.
+
+26. Rank vs Size
+    Answer: B
+    Explanation: Rank = number of dimensions = 4. The size of the first dimension is 1000.
+    The engineer confused rank with dimension size.
+
+27. Challenge - Shape Interpretation
+    Answer: A
+    Explanation: Shape (8, 30, 12, 64) most reasonably represents:
+    8 samples, 30 time steps, 12 sensors, 64 features per sensor
+    This makes semantic sense for sequence-based engineering applications.

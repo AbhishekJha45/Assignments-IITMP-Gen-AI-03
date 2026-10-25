@@ -1,0 +1,261 @@
+DAY 9-11 — FOUNDATIONAL MCQ (KNN, Naive Bayes, Decision Trees, Random Forest, Logistic Regression)
+
+--- K-Nearest Neighbors (KNN) ---
+1. B — Assign a class based on nearby training examples
+2. C — The number of neighbors considered
+3. B — By a vote among its five nearest training samples
+4. B — KNeighborsClassifier
+5. A — from sklearn.neighbors import KNeighborsClassifier
+6. B — model.fit(X_train, y_train)
+7. C — model.predict(X_test)
+8. B — Features with larger numerical ranges may dominate distance calculations
+9. B — Income may dominate the distance calculation
+10. A — StandardScaler
+11. A — Pipeline([("scaler", StandardScaler()), ("knn", KNeighborsClassifier())])
+12. B — To prevent information from the test set entering model preparation
+13. A — The classifier considers the single closest training example
+14. B — Noise and unusual training examples
+15. A — Predictions may become overly smooth and miss local patterns
+16. A — To choose a K that performs well on unseen data
+17. B — It can reduce voting ties
+18. A — Gives closer neighbors greater influence
+19. A — All selected neighbors contribute equally to the vote
+20. A — Euclidean distance
+21. A — Manhattan distance
+22. A — The distance used to find neighbors
+23. A — Prediction can fail because there are too few samples
+24. A — Predicting a continuous value
+25. A — It combines target values of nearby training samples
+26. A — Predicting house price from features of similar houses
+27. B — Predicting whether a patient belongs to a risk category
+28. A — It may need to search many stored training samples for neighbors
+29. A — It uses stored training examples when making predictions
+30. A — They can distort which samples appear close
+31. A — Distances may become less informative as the number of features grows
+32. A — The nearby evidence conflicts
+33. A — model.predict_proba(X_test)
+34. A — A
+35. A — Scale the features appropriately
+36. A — Reserves approximately 20% of samples for testing
+37. A — To keep the final test evaluation independent
+38. A — Recall for the positive class
+39. A — Classification accuracy
+40. A — Predicting the majority class can produce high accuracy while missing the minority class
+41. A — How to encode the category and whether the resulting distance is meaningful
+42. A — The numbers imply distances and ordering that may not exist
+43. A — Neighbor selection may become less reliable
+44. A — Evaluate candidate hyperparameters using cross-validation
+45. A — n_neighbors
+46. A — Pixel-space distance may not match meaningful visual similarity
+47. A — weights="distance"
+48. A — When similar feature profiles are expected to have similar outcomes
+49. A — Training input features
+50. A — Training target values or class labels
+
+--- Naive Bayes ---
+1. A — Supervised classification
+2. A — Features are treated as conditionally independent given the class
+3. A — Bayes’ theorem
+4. A — The probability of a class given features of an email
+5. A — GaussianNB
+6. A — MultinomialNB
+7. A — BernoulliNB
+8. A — from sklearn.naive_bayes import GaussianNB
+9. A — model = GaussianNB()
+10. A — Learns parameters from labeled training data
+11. A — Predicted class labels
+12. A — Estimated probabilities for each class
+13. A — The probability of a class before considering the current sample’s features
+14. A — Legitimate email is more common in the training data
+15. A — How probable the observed features are under a particular class
+16. A — Document topic classification
+17. A — It can work efficiently with high-dimensional word features
+18. A — Numeric features representing token counts
+19. A — CountVectorizer() followed by MultinomialNB()
+20. A — The classifier expects a numerical feature representation
+21. A — Zero probabilities caused by unseen feature–class combinations
+22. A — Additive smoothing
+23. A — The estimated likelihood for that word under the class may be zero
+24. A — It is an approximation that may still yield useful predictions
+25. A — Their occurrences may be related even after accounting for the class
+26. A — Continuous measurements such as temperature and blood pressure
+27. A — Yes
+28. A — Positive
+29. A — The class labels and their probability-column order
+30. A — Missing positive cases and issuing false alarms can have different consequences
+31. A — Recall
+32. A — Precision
+33. A — Counts of correct and incorrect predictions by class
+34. A — To avoid learning vocabulary information from the test set
+35. A — It keeps text transformation and classification together during training and evaluation
+36. A — That word alone may provide limited discrimination between the classes
+37. A — Its presence can support the spam class
+38. A — The former can use token counts; the latter commonly uses binary presence indicators
+39. A — “Spam” versus “not spam”
+40. A — Examine whether changed priors affect performance and probability estimates
+41. A — Calibration and evaluation on representative data
+42. A — Yes
+43. A — The model uses feature evidence to compare candidate classes
+44. A — Parameters such as mean and variance
+45. A — Their evidence can effectively be counted more than intended
+46. A — It estimates how the trained model performs on unseen examples
+47. A — Precision, recall, F1-score, and support
+48. A — Performance on the spam class
+49. A — Nonnegative token-count features
+50. A — When building a fast, interpretable baseline for labeled text classification
+
+--- Decision Trees ---
+1. A — It follows feature-based splits from the root to a leaf
+2. A — A test or split on a feature
+3. A — A prediction or class distribution
+4. A — DecisionTreeClassifier
+5. A — DecisionTreeRegressor
+6. A — from sklearn.tree import DecisionTreeClassifier
+7. A — Learns splits from labeled training data
+8. A — Predicted class labels
+9. A — The first split at the top of the tree
+10. A — To separate examples into groups that are more useful for prediction
+11. A — How mixed the class labels are within a node
+12. A — Pure
+13. A — The measure used to evaluate candidate classification splits
+14. A — How deep the tree can grow
+15. A — It can learn narrow patterns specific to the training samples
+16. A — Very high training performance but much lower test performance
+17. A — The minimum number of training samples required in a leaf
+18. A — It can prevent very small, specialized leaves
+19. A — The minimum number of samples required for a node to be considered for splitting
+20. A — Tree splits depend on feature thresholds rather than distances between whole samples
+21. A — It follows the branch for values satisfying the condition
+22. A — Its decision rules can often be inspected
+23. A — plot_tree
+24. A — Impurity-based importance scores for input features
+25. A — Importance in the fitted model does not establish a causal relationship
+26. A — Predicting whether a loan application belongs to an approval category
+27. A — Predicting a house’s sale price
+28. A — A class based on training examples reaching that leaf
+29. A — From the class proportions of training samples in that leaf
+30. A — Reducing tree complexity by removing or limiting branches
+31. A — Cost-complexity pruning
+32. A — To compare generalization performance across candidate depths
+33. A — Small changes in training data can sometimes produce a different tree
+34. A — Reproducibility of results across runs
+35. A — Class imbalance and per-class evaluation metrics
+36. A — The influence of classes based on their frequencies
+37. A — Yes, through combinations of feature splits
+38. A — It makes only one split before predicting
+39. A — A decision tree with a single split
+40. A — The depth of the fitted tree
+41. A — The number of leaf nodes
+42. A — To obtain a final evaluation on data not used for tuning
+43. A — Mean absolute error
+44. A — F1-score
+45. A — Information unavailable at prediction time enters training or evaluation
+46. A — The feature contains information that would not yet be available at admission
+47. A — max_leaf_nodes
+48. A — One feature against a threshold at a time
+49. A — Standard scikit-learn tree estimators require numeric feature arrays
+50. A — When clear, inspectable rules are valuable
+
+--- Random Forest ---
+1. A — An ensemble of decision trees used together for classification
+2. A — To make predictions more stable than a single tree in many settings
+3. A — RandomForestClassifier
+4. A — RandomForestRegressor
+5. A — from sklearn.ensemble import RandomForestClassifier
+6. A — Build 100 trees
+7. A — By combining the predictions of its trees
+8. A — It averages their numerical predictions
+9. A — Sampling training rows with replacement for individual trees
+10. A — The same training row can be selected more than once in a sample
+11. A — To introduce diversity among trees
+12. A — A forest combines multiple trees
+13. A — Fits the forest using labeled training examples
+14. A — Predicted class labels
+15. A — Estimated probabilities for each class
+16. A — Random choices in fitting and their resulting model
+17. A — Tree splits rely on thresholds rather than distances between full samples
+18. A — A training sample not selected for that tree’s bootstrap sample
+19. A — An internal performance estimate using out-of-bag training samples
+20. A — No
+21. A — The maximum depth of its individual trees
+22. A — Make individual trees less focused on tiny groups of training samples
+23. A — How many features are considered when looking for a split
+24. A — Combining them offers less benefit from diversity
+25. A — Predicting whether a transaction is fraudulent
+26. A — Predicting a patient’s length of stay in days as a numerical value
+27. A — Combining varied trees can reduce sensitivity to individual training examples
+28. A — Its overall prediction process is harder to explain as a short set of rules
+29. A — Impurity-based feature importance scores
+30. A — It can favor certain feature types and does not establish causation
+31. A — Measuring performance changes after shuffling a feature’s values
+32. A — To see whether the feature helps predictions beyond the training examples
+33. A — Differences in class frequency
+34. A — Precision and recall for fraud
+35. A — A model can predict “legitimate” almost always and still achieve high accuracy
+36. A — Fitting and prediction may require more computation
+37. A — No
+38. A — Use all available CPU workers for supported parallel computation
+39. A — To compare candidate settings on multiple training/validation splits
+40. A — model = RandomForestClassifier(n_estimators=100); model.fit(X_train, y_train)
+41. A — Approximate class proportions across splits
+42. A — Training or model selection uses information that would not be available at prediction time
+43. A — Exclude that future-information feature from admission-time prediction
+44. A — Yes, tree paths can combine splits on multiple features
+45. A — It generally has limited ability to extrapolate beyond observed target ranges
+46. A — The estimator expects numeric feature input
+47. A — Evaluate both on the same appropriate validation or test data and metrics
+48. A — Evaluation and possibly calibration on representative data
+49. A — Diversity among its trees
+50. A — For labeled tabular data with potentially nonlinear relationships
+
+--- Logistic Regression ---
+1. A — Classification
+2. A — A probability-like estimate for a class
+3. A — LogisticRegression
+4. A — from sklearn.linear_model import LogisticRegression
+5. A — Disease present or absent
+6. A — Estimates model parameters using labeled training data
+7. A — Predicted class labels
+8. A — Estimated probabilities for each class
+9. A — Sigmoid function
+10. A — A probability cutoff used to convert a score into a class prediction
+11. A — Positive
+12. A — To identify more potential positive cases, while potentially increasing false alarms
+13. A — It may increase
+14. A — It may increase
+15. A — Larger values of that feature increase the model’s log-odds of the positive class
+16. A — No, feature units and scaling affect coefficient magnitudes
+17. A — It can improve optimization and make regularization act more comparably across features
+18. A — StandardScaler
+19. A — Pipeline([("scaler", StandardScaler()), ("model", LogisticRegression())])
+20. A — To prevent validation information leaking into training
+21. A — Discourages excessively large coefficients
+22. A — Stronger regularization
+23. A — Weaker regularization
+24. A — Some coefficients becoming exactly zero
+25. A — Smaller coefficients without generally forcing them all to zero
+26. A — Linear in the supplied features
+27. A — Yes
+28. A — Adding polynomial or interaction features
+29. A — The logarithm of the odds of the positive class
+30. A — That feature makes no direct contribution to the score through that coefficient
+31. A — Precision
+32. A — Recall
+33. A — Predicting the majority class can give high accuracy while missing rare events
+34. A — Counts of correct and incorrect predictions by actual and predicted class
+35. A — How well model scores rank positive examples above negative examples across thresholds
+36. A — Evaluating positive-class detection in an imbalanced dataset
+37. A — A predicted risk of 0.8 should correspond reasonably to observed outcomes near that level
+38. A — coef_
+39. A — intercept_
+40. A — Which class corresponds to each column of predict_proba
+41. A — Yes
+42. A — Assigning a document to sports, politics, or science
+43. A — To weight classes inversely according to their frequency
+44. A — It may leak information unavailable at prediction time
+45. A — The optimization procedure has reached its stopping condition for parameter estimation
+46. A — Feature scaling, solver settings, and the iteration limit
+47. A — The maximum number of optimization iterations
+48. A — It provides a final assessment on examples not used to choose the model
+49. A — When you want a relatively simple classifier with inspectable coefficients and predicted probabilities
+50. A — The chosen decision threshold

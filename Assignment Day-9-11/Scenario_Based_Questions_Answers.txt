@@ -1,0 +1,61 @@
+DAY 9-11 — SCENARIO BASED QUESTIONS
+
+--- K-Nearest Neighbors (KNN) ---
+1. B — Find similar patients and use their labels to classify the new patient
+2. A — Rose
+3. A — Scaling the features before fitting KNN
+4. B — KNeighborsRegressor
+5. A — One unusual training example can strongly affect a prediction
+6. A — A large neighborhood can hide local patterns
+7. A — Predicting may involve searching many stored examples for nearby animals
+8. A — weights="distance"
+9. A — Compare their performance using cross-validation on the training data
+10. A — model.fit(X_train, y_train)
+
+--- Naive Bayes ---
+1. A — It can use word-based evidence to compare the possible classes
+2. A — MultinomialNB
+3. A — GaussianNB
+4. A — BernoulliNB
+5. A — Its estimated likelihood under the legitimate class may be zero
+6. A — Control additive smoothing
+7. A — It treats feature evidence as conditionally independent given a class
+8. A — The class prior probabilities
+9. A — The vocabulary preparation can use information from the test emails
+10. A — Recall for the spam class
+
+--- Decision Trees ---
+1. A — Decision tree
+2. A — A root-node split
+3. A — Restricting tree depth or increasing min_samples_leaf
+4. A — DecisionTreeClassifier
+5. A — DecisionTreeRegressor
+6. A — Follow the branch where the condition is true
+7. A — plot_tree
+8. A — The fitted tree relied strongly on that feature for its splits
+9. A — The feature would not be available when the prediction is needed
+10. A — Find a depth that balances useful patterns and generalization
+
+--- Random Forest ---
+1. A — Random forest
+2. A — The forest contains 100 trees
+3. A — Combining predictions from multiple trees
+4. A — RandomForestRegressor
+5. A — To create variation by sampling rows with replacement
+6. A — Precision and recall for the fraud class
+7. A — The forest used age substantially, but the result does not prove age causes the outcome
+8. A — Training samples not selected for that tree’s bootstrap sample
+9. A — More computation, without a guarantee of better test performance
+10. A — Remove the future-information feature and reevaluate
+
+--- Logistic Regression ---
+1. A — LogisticRegression
+2. A — Positive
+3. A — Lowering it, while evaluating the resulting false alarms
+4. A — More actual positive cases are identified, along with more false alarms
+5. A — Standardizing the input features
+6. A — C=0.01
+7. A — Higher blood pressure increases the model’s log-odds of the positive class
+8. A — Recall, precision, and the confusion matrix for the disease class
+9. A — Check feature scaling and consider solver settings or max_iter
+10. A — The input contains information unavailable at admission

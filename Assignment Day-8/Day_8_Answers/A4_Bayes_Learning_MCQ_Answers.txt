@@ -1,0 +1,22 @@
+DAY 8 — A4: BAYES LEARNING MCQs
+
+1. B — Bayes' Theorem.
+2. B — P(A|B)=P(B|A)P(A)/P(B).
+3. C — P(A) is the prior probability of A.
+4. A — P(A|B) means the probability of A given B.
+5. C — P(B|A) is the likelihood of observing B given A.
+6. B — Maximum a posteriori (MAP) estimation.
+7. The calculation gives P(A|B)=P(B|A)P(A)/P(B)=0.5×0.4/0.2=1.00. None of the listed options (0.10, 0.25, 0.50, 0.80) is correct; the question/options contain an error.
+8. C — Prevalence (prior probability) and test characteristics are all needed. For the given numbers, P(disease|positive)=0.01×0.90 / (0.01×0.90 + 0.99×0.05)≈0.1538, or 15.4%.
+9. A — A very low prior prevalence can keep positive predictive value low despite a good test.
+10. B — Bayesian learning updates prior beliefs using observed evidence.
+11. B — The posterior is updated based on the evidence.
+12. C — Prior is before evidence; posterior is the updated probability after evidence.
+13. B — Features are conditionally independent given the class.
+14. A — Conditionally independent given the class.
+15. B — The conditional-independence assumption may be unrealistic.
+16. B — With equal likelihoods, the class with the larger prior has the larger posterior.
+17. B — Conditional probabilities are generally not symmetric.
+18. A — For independent events, P(A|B)=P(A) (equivalently P(B|A)=P(B)).
+19. B — Sufficiently strong evidence can outweigh a small prior.
+20. C — The prior-times-likelihood numerators are both 0.16, but posterior probabilities require the evidence probability for each model; the supplied values alone do not determine them.

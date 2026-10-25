@@ -1,0 +1,22 @@
+DAY 8 — A2: UNSUPERVISED LEARNING MCQs
+
+1. C — Clustering does not guarantee meaningful semantic groups.
+2. B — It discovers structure without predefined target labels.
+3. C — Four similarity-based groups under the selected representation and distance.
+4. B — The chosen number of clusters does not prove the data naturally has that many groups.
+5. C — Classification uses known target labels; clustering generally does not.
+6. B — Random initialization or stochastic optimization can vary results.
+7. C — Lower SSE does not necessarily mean more useful or meaningful clusters.
+8. B — SSE usually falls as K rises, so the raw values alone do not establish that K=6 is better.
+9. B — It helps identify where additional clusters yield diminishing improvement.
+10. B — Unequal cluster sizes can affect K-Means results.
+11. C — PCA may discard dimensions that contain useful clustering information.
+12. B — Compactness alone is insufficient; separation and usefulness also matter.
+13. C — Strongly non-spherical clusters are poorly suited to standard K-Means.
+14. B — Income may dominate distances because its numeric scale is much larger.
+15. B — Outliers can substantially shift mean-based centroids.
+16. A — Hard clustering assigns each point to exactly one cluster.
+17. A — Soft clustering allows degrees of membership across clusters.
+18. B — The association needs independent validation; clustering does not itself establish a disease category.
+19. C — Unsupervised learning does not always discover objectively correct groups.
+20. B — The result depends on feature representation and the distance metric, including scaling.

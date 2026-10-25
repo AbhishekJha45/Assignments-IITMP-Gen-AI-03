@@ -1,0 +1,22 @@
+DAY 8 — A5: K-NEAREST NEIGHBORS MCQs
+
+1. A — Supervised learning.
+2. C — Number of nearest neighbors considered.
+3. B — Lazy learning.
+4. B — Most computation is deferred until prediction time.
+5. A — Euclidean distance is common for continuous numerical features.
+6. B — It considers the five nearest training samples.
+7. B — Majority vote among the nearest neighbors.
+8. A — Class A (two votes versus one).
+9. B — Larger-scale features can dominate the distances.
+10. B — It uses only the nearest training sample.
+11. A — A very small K (such as 1) can be sensitive to noise and outliers.
+12. B — A very large K can be dominated by the overall class distribution and underfit local structure.
+13. B — KNN stores training data and computes neighbors at prediction time.
+14. B — Income may dominate Euclidean distance without scaling.
+15. B — High training accuracy with poor test accuracy suggests overfitting.
+16. B — Decreasing K increases sensitivity to local variations.
+17. B — Equal-distance neighbors of different classes can create a voting tie.
+18. B — KNN can suffer from the curse of dimensionality.
+19. B — Class B (three votes versus two).
+20. B — K=15 may generalize better because its test accuracy is higher; selection should be based on held-out/validation performance, not training accuracy alone.

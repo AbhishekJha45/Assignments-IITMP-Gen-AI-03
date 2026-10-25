@@ -1,0 +1,42 @@
+DAY 8 — A3: K-MEANS PROBLEMS
+
+Notation note: The source document's equation formatting omits separators. I interpret its fused entries as X={2,4,5,10,12,13} in Problem 1; C1=(1,1), C2=(8,8) in Problem 2; X={1,2,3,8,9,10} in Problem 3; and A=(1,1), B=(2,2), C=(3,3), D=(8,8), E=(9,9), F=(10,10) in Problem 4. These readings follow the displayed centroid coordinates and point labels.
+
+PROBLEM 1
+Points: 2, 4, 5, 10, 12, 13; initial centroids C1=4 and C2=12. Distances are absolute differences.
+
+x | d(x,C1) | d(x,C2) | Assignment
+2 | 2 | 10 | C1
+4 | 0 | 8 | C1
+5 | 1 | 7 | C1
+10 | 6 | 2 | C2
+12 | 8 | 0 | C2
+13 | 9 | 1 | C2
+
+Clusters after assignment: C1={2,4,5}; C2={10,12,13}.
+Updated centroids: mu1=(2+4+5)/3=11/3≈3.667; mu2=(10+12+13)/3=35/3≈11.667.
+
+PROBLEM 2
+Initial centroids: C1=(1,1), C2=(8,8). Using Euclidean distance:
+A=(1,1), B=(2,2), C=(3,1) are assigned to C1; D=(8,8), E=(9,7), F=(8,9) are assigned to C2.
+Updated C1=((1+2+3)/3,(1+2+1)/3)=(2,4/3)≈(2,1.333).
+Updated C2=((8+9+8)/3,(8+7+9)/3)=(25/3,8)≈(8.333,8).
+
+PROBLEM 3
+Points: 1,2,3,8,9,10; initial centroids C1=2 and C2=9.
+Assignments: C1={1,2,3}; C2={8,9,10} (each point is closest to the centroid on its side of the midpoint 5.5).
+Updated centroids: C1=2 and C2=9.
+Within-cluster SSE = [(1−2)^2+(2−2)^2+(3−2)^2]+[(8−9)^2+(9−9)^2+(10−9)^2]=2+2=4.
+
+PROBLEM 4
+Initial centroids C1=(2,2), C2=(9,9). Assignments: C1={A,B,C} and C2={D,E,F}; the cluster boundary is the perpendicular bisector between these diagonal centroids.
+Updated centroids: C1=((1+2+3)/3,(1+2+3)/3)=(2,2); C2=((8+9+10)/3,(8+9+10)/3)=(9,9).
+SSE for C1 = 2+0+2=4. SSE for C2 = 2+0+2=4. Total SSE=8.
+Another iteration will not change the assignments: the updated centroids equal the initial centroids, so this is already stable.
+
+PROBLEM 5
+SSE reductions as K increases: 1→2: 550; 2→3: 230; 3→4: 70; 4→5: 20; 5→6: 10.
+A reasonable elbow choice is K=3: the large improvements through K=3 taper substantially afterward. K=6 has the lowest SSE largely because adding clusters cannot increase the best achievable SSE; it may over-segment the data and is not automatically the most meaningful solution. The sharp decline from K=1 to K=3 indicates that allowing a few clusters greatly improves compactness, but it does not alone prove the data contains exactly three natural groups.
+
+PROBLEM 6
+No. Run B's lower SSE (180 vs 250) is expected in part because it uses more clusters (K=3 vs K=2). Raw SSE values at different K are not a fair standalone comparison. Use an elbow plot, a suitable validity measure such as silhouette score, stability across initializations, and domain interpretability; choose K based on the task and evidence.
